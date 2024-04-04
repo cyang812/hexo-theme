@@ -1,139 +1,156 @@
-<p align="center">
-  <img alt="Fluid Logo" src="https://avatars2.githubusercontent.com/t/3419353?s=280&v=4" width="128">
-</p>
+<div align="right">
+  <img src="https://img.shields.io/badge/-English-A31F34?style=for-the-badge" alt="English" />
+  <a title="zh-CN" href="README_zh-CN.md">  <img src="https://img.shields.io/badge/-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-545759?style=for-the-badge" alt="简体中文"></a>
+  <a title="zh-TW" href="README_zh-TW.md"><img src="https://img.shields.io/badge/-%E7%B9%81%E4%BD%93%E4%B8%AD%E6%96%87-545759?style=for-the-badge" alt="繁体中文"></a>
+</div>
 
-<p align="center">一款 Material Design 风格的主题</p>
-<p align="center">An elegant Material-Design theme for Hexo</p>
+<a href="https://redefine.ohevan.com"><img align="center" src="https://user-images.githubusercontent.com/68590232/226141917-68124e8f-fde0-4edd-b86d-c62932ec369a.png"  alt="Redefine"></a>
 
-![ScreenShot](https://cdn.jsdelivr.net/gh/fluid-dev/static@master/hexo-theme-fluid/screenshots/index.png)
 
-<p align="center">
-  <a title="Hexo Version" target="_blank" href="https://hexo.io/zh-cn/"><img alt="Hexo Version" src="https://img.shields.io/badge/Hexo-%3E%3D%203.0-orange?style=flat"></a>
-  <a title="Node Version" target="_blank" href="https://nodejs.org/zh-cn/"><img alt="Node Version" src="https://img.shields.io/badge/Node-%3E%3D%208.10.0-yellowgreen?style=flat"></a>
-  <a title="License" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/fluid-dev/hexo-theme-fluid.svg?style=flat"></a>
-  <br>
-  <a title="GitHub Release" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/fluid-dev/hexo-theme-fluid?style=flat"></a>
-  <a title="Npm Downloads" target="_blank" href="https://www.npmjs.com/package/hexo-theme-fluid"><img alt="Npm Downloads" src="https://img.shields.io/npm/dt/hexo-theme-fluid?color=red&label=npm"></a>
-  <a title="GitHub Commits" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/commits/master"><img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/m/fluid-dev/hexo-theme-fluid.svg?style=flat&color=brightgreen&label=commits"></a>
-  <br><br>
-  <a title="GitHub Watchers" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/watchers"><img alt="GitHub Watchers" src="https://img.shields.io/github/watchers/fluid-dev/hexo-theme-fluid.svg?label=Watchers&style=social"></a>  
-  <a title="GitHub Stars" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/fluid-dev/hexo-theme-fluid.svg?label=Stars&style=social"></a>  
-  <a title="GitHub Forks" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/fluid-dev/hexo-theme-fluid.svg?label=Forks&style=social"></a>  
-</p>
 
-<p align="center">🇨🇳 中文简体  |  <a title="English" href="README_en.md">🇬🇧 English</a></p>
+# hexo-theme-redefine
+
+"Redefine" hexo theme is a blend of **simplicity, speed, and purity**, yet it makes **no compromises** on functionality or design. Loaded with widely utilized features and polished web design, it seamlessly marries practicality with aesthetics.
+
+Drawing its core from [hexo-theme-keep](https://github.com/XPoet/hexo-theme-keep), this theme elevates the foundation by enhancing the style and integrating valuable writing modules and plugins. The theme encourages personalization, offering extensive customizability to mold various facets to your liking, making your blogging journey truly unique and user-friendly.
+
 
 <p align="center">
-  <span>文档：</span>
-  <a href="https://hexo.fluid-dev.com/docs/guide/">主题配置</a> | 
-  <a href="https://hexo.io/zh-cn/docs/front-matter">文章配置</a>
+    <a href="https://www.npmjs.com/package/hexo-theme-redefine">
+        <img src="https://img.shields.io/npm/v/hexo-theme-redefine?color=F38181&amp;label=version&amp;logo=npm&amp;logoColor=F38181&amp;style=for-the-badge" referrerpolicy="no-referrer" alt="NPM version" />
+    </a>
+    <a href="https://www.npmjs.com/package/hexo-theme-redefine">
+        <img src="https://img.shields.io/npm/dm/hexo-theme-redefine?color=FCE38A&amp;logo=npm&amp;logoColor=FCE38A&amp;style=for-the-badge" referrerpolicy="no-referrer" alt="npm downloads" />
+    </a>
+    <a href="https://www.npmjs.com/package/hexo-theme-redefine">
+        <img src="https://img.shields.io/npm/dt/hexo-theme-redefine?color=95E1D3&amp;label=total&amp;logo=npm&amp;logoColor=95E1D3&amp;style=for-the-badge" referrerpolicy="no-referrer" alt="npm-total" />
+    </a>
+    <a href="https://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E=5.0.0-8caaee?style=for-the-badge&amp;logo=hexo&amp;logoColor=8caaee" referrerpolicy="no-referrer" alt="Required Hexo version" /></a>
+    <img src="https://img.shields.io/badge/node-%3E=12.0-a6d189?style=for-the-badge&amp;logo=node.js&amp;logoColor=a6d189" referrerpolicy="no-referrer" alt="NodeJS Version" />
 </p>
 
-<p align="center">
-  <span>预览：</span>
-  <a href="https://hexo.fluid-dev.com/">Fluid's blog</a> | 
-  <a href="https://zkqiang.cn">zkqiang's blog</a>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/EvanNotFound/hexo-theme-redefine/assets/68590232/337c1801-7a59-45af-a02a-583508be69a5" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/EvanNotFound/hexo-theme-redefine/assets/68590232/d88a5544-c86e-46ab-8e52-0582b437f989" />
+  <img alt="Cover Image" src="https://github.com/EvanNotFound/hexo-theme-redefine/assets/68590232/d88a5544-c86e-46ab-8e52-0582b437f989" />
+</picture>
 
-## 快速开始
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/EvanNotFound/hexo-theme-redefine/assets/68590232/5d51b48d-7b08-4da0-a304-933424739203" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/EvanNotFound/hexo-theme-redefine/assets/68590232/c6df4b81-557d-4e0b-8038-b056075d0fa4" />
+  <img alt="Pages Image" src="https://github.com/EvanNotFound/hexo-theme-redefine/assets/68590232/c6df4b81-557d-4e0b-8038-b056075d0fa4" />
+</picture>
 
-#### 1. 搭建 Hexo 博客
+## 🌐 Demo
 
-如果你还没有 Hexo 博客，请按照 [Hexo 官方文档](https://hexo.io/zh-cn/docs/) 进行安装、建站。
+- [EvanNotFound's Blog](https://ohevan.com)
+- [Theme Redefine Demo](https://redefine.ohevan.com)
+- [Redefine Theme Showcase](https://redefine.ohevan.com/showcase)
 
-#### 2. 获取主题最新版本
+If you are also using Redefine, please go to [Redefine Theme Showcase](https://redefine.ohevan.com/showcase) to add your blog link.
 
-**方式一：**
+## ⛰️ Features
 
-Hexo 5.0.0 版本以上，推荐通过 npm 直接安装，进入博客目录执行命令：
+- [Note Module](https://redefine-docs.ohevan.com/modules/notes)
+- [Friend Link Page](https://redefine-docs.ohevan.com/page_templates/friends)
+- [Mathjax Support](https://redefine-docs.ohevan.com/plugins/mathjax)
+- Code block language display
+- Light/Dark mode switching
+- [Font Awesome 6.2.1 Pro](https://redefine-docs.ohevan.com/basic/fontawesome) (contains different styles like Duotone/Regular/Thin/Sharp)
+- [Drop-down menu](https://redefine-docs.ohevan.com/dhome/navbar#%E9%93%BE%E6%8E%A5%E5%88%97%E8%A1%A8)
+- [Customizable footer](https://redefine-docs.ohevan.com/footer)
+- [Site Uptime Display](https://redefine-docs.ohevan.com/footer#%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4)
+- [Article Header Image](https://redefine-docs.ohevan.com/article_customize/banner)
+- [Mermaid JS support](https://redefine-docs.ohevan.com/plugins/mermaid)
+- SEO friendly
+- [Aplayer support](https://redefine-docs.ohevan.com/plugins/aplayer)
+- [Shuoshuo support](https://redefine-docs.ohevan.com/shuoshuo)
+- [Customizable Font](https://redefine-docs.ohevan.com/basic/global#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93)
+- Tailwind CSS Included
+
+
+
+## ☁️ Installation
+
+The easiest way to install Theme Redefine is by using **npm** (after your hexo version has been up to `5.0`+)
 
 ```sh
-npm install --save hexo-theme-fluid
+$ cd your-hexo-site
+$ npm install hexo-theme-redefine@latest
 ```
 
-然后在博客目录下创建 `_config.fluid.yml`，将主题的 [_config.yml](https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml) 内容复制进去。
+Another method is by **git clone**
 
-**方式二：**
+```sh
+$ cd your-hexo-site
+$ git clone https://github.com/EvanNotFound/hexo-theme-redefine.git themes/redefine
+```
 
-下载 [最新 release 版本](https://github.com/fluid-dev/hexo-theme-fluid/releases) 解压到 themes 目录，并将解压出的文件夹重命名为 `fluid`。
-
-#### 3. 指定主题
-
-如下修改 Hexo 博客目录中的 `_config.yml`：
+After the installation, go to the `_config.yml` of your hexo site and set
 
 ```yaml
-theme: fluid  # 指定主题
-
-language: zh-CN  # 指定语言，会影响主题显示的语言，按需修改
+theme: redefine
 ```
 
-#### 4. 创建「关于页」
+## ⏫ Update
 
-首次使用主题的「关于页」需要手动创建：
+To update hexo-theme-redefine, you can run the same **npm** command
 
-```bash
-hexo new page about
+```sh
+$ npm install hexo-theme-redefine@latest
 ```
 
-创建成功后，编辑博客目录下 `/source/about/index.md`，添加 `layout` 属性。
+Another method is by **git clone**
 
-修改后的文件示例如下：
-
-```yaml
----
-title: about
-date: 2020-02-23 19:20:33
-layout: about
----
-
-这里写关于页的正文，支持 Markdown, HTML
+```sh
+$ git clone https://github.com/EvanNotFound/hexo-theme-redefine.git themes/redefine
 ```
 
-## 更新主题
 
-更新主题的方式[参照这里](https://hexo.fluid-dev.com/docs/start/#更新主题)。
 
-## 功能特性
+## 📄 Documentations
 
-- [x] 图片懒加载
-- [x] 自定义代码高亮方案
-- [x] 内置多语言
-- [x] 支持多款评论插件
-- [x] 支持使用[数据文件](https://hexo.io/zh-cn/docs/data-files)存放配置
-- [x] 自定义静态资源 CDN
-- [x] 无比详实的[用户文档](https://hexo.fluid-dev.com/docs/)
-- [x] 内置文章搜索
-- [x] 页脚备案信息
-- [x] 网页访问统计
-- [x] 支持脚注语法
-- [x] 支持 LaTeX 数学公式
-- [x] 支持 mermaid 流程图
-- [x] 暗色模式
+Please read [Redefine Docs](https://redefine-docs.ohevan.com/) when installing
 
-## 贡献者
+It's very easy to understand.
 
-[![contributors](https://opencollective.com/hexo-theme-fluid/contributors.svg?width=890&button=false)](https://github.com/fluid-dev/hexo-theme-fluid/graphs/contributors)
 
-英文文档翻译：[@EatRice](https://eatrice.top/) [@橙子杀手](https://ruru.eatrice.top)
 
-其他贡献：[@zhugaoqi](https://github.com/zhugaoqi) [@julydate](https://github.com/julydate)
+## ☕ Support
 
-如你也想贡献代码，可参照[贡献指南](https://hexo.fluid-dev.com/docs/contribute/)
+Feel free to **pull request** and **send issues**.
 
-## 支持
+If you have any questions, please send an email to [contact@ohevan.com](mailto:contact@ohevan.com). I will reply in time.
 
-你可以扫描下方微信赞赏码支持我们的开源创作，资金将用于服务器及域名开销以及今后的公共接口服务。
+Please **give me a star** to support me, thanks!
 
-<img src="https://github.com/fluid-dev/static/blob/master/hexo-theme-fluid/sponsor.png?s=200&v=4" width="200" alt="微信赞赏码">
+Also, if you are using [Typora](https://typora.io/), check out [Typora Theme Redefine](https://github.com/EvanNotFound/typora-theme-redefine) so that you can preview the styles of your blog in Typora.
 
-同时我们正在寻找商业赞助商，如果贵司想在本页展示广告位（每月 6K+ Views 定向流量曝光），或者有其他赞助形式，可将联系方式发送邮件至 zkqiang#126.com (#替换为@)。
+## 💗 Donations
 
-## 鸣谢
+Thanks to all the people who have donated to me. Your support is my greatest motivation.
 
-<a title="鸣谢 JetBrains 免费授权开发工具" href="https://www.jetbrains.com/?from=hexo-theme-fluid" target="_blank">
-  <img src="https://raw.githubusercontent.com/fluid-dev/static/690616966f34a58d66aa15ac7b550dd7bbc03967/hexo-theme-fluid/jetbrains.svg" width="150" alt="JetBrains">
+If you like this theme, please give a star. You can also support me by [donating](https://github.com/EvanNotFound/hexo-theme-redefine/blob/dev/DONATION.md).
+
+This is the list of all the people who have donated to me: [Donation List](https://github.com/EvanNotFound/hexo-theme-redefine/blob/dev/DONATION.md)
+
+
+Want to use OpenAI GPT-4 but don't want to pay $20 per month? Check out [GPT Plus Tokens](https://gpt.oknice.ca)! You can use up to 100 ChatGPT Plus Accounts!
+
+![CleanShot 2023-12-08 at 12 47 20@2x](https://github.com/EvanNotFound/hexo-theme-redefine/assets/68590232/b25196a1-3ba4-43bb-9d0f-e23d3527e6ff)
+
+## 🌟 Star History
+
+<p align="center">
+<a href="https://star-history.com/#EvanNotFound/hexo-theme-redefine&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=EvanNotFound/hexo-theme-redefine&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=EvanNotFound/hexo-theme-redefine&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=EvanNotFound/hexo-theme-redefine&type=Date" />
+  </picture>
 </a>
+</p>
 
-## Star 趋势
+## 💻 Development
 
-[![Stargazers over time](https://starchart.cc/fluid-dev/hexo-theme-fluid.svg)](https://starchart.cc/fluid-dev/hexo-theme-fluid)
+If you want to contribute to this project, you can clone the `dev` branch and check out the [Development Docs](https://redefine-docs.ohevan.com/developer) to get started.
