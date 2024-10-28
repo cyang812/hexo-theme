@@ -15,10 +15,12 @@
         <% const cdnLinks = {
             'jsdelivr': 'https://cdn.jsdelivr.net',
             'unpkg': 'https://unpkg.com',
-            'personal': 'https://evan.beee.top',
+            'aliyun': 'https://evan.beee.top',
             'cdnjs': 'https://cdnjs.cloudflare.com',
-            'bootcdn': 'https://cdn.bootcdn.net',
-            'staticfile': 'https://cdn.staticfile.org'
+            'sustech': 'https://mirrors.sustech.edu.cn',
+            'zstatic': 'https://s4.zstatic.net',
+            'npmmirror': 'https://registry.npmmirror.com',
+
         }; %>
         <% if (cdnLinks[provider]) { %>
             <link rel="preconnect" href="<%= cdnLinks[provider] %>" crossorigin>
@@ -69,9 +71,10 @@
     %>
     <title>
         <% if (title) { %>
-            <%= title %> -
+            <%= title %> | <%= theme.info.title || config.title || 'Redefine Theme' %>
+        <% } else { %>
+            <%= theme.info.title || config.title || 'Redefine Theme' %> - <%= theme.info.subtitle || config.subtitle || 'Redefine Your Hexo Journey.' %>
         <% } %>
-        <%= theme.info.title || config.title || 'Redefine Theme' %>
     </title>
 
     <%- renderCSS('fonts/Chillax/chillax.css') %>
@@ -87,10 +90,6 @@
             <% } }%>
     <% } }%>
 
-    <% if (theme.global.preloader) { %>
-        <%- partial('_partials/preloader') %>
-    <% } %>
-
     <%- css('css/style') %>
 
     <% if (theme.developer && theme.developer.enable) {%>
@@ -99,8 +98,8 @@
         <%- renderCSS('assets/build/styles.css') %>
     <% } %>
 
-    <%- renderCSS('fonts/fonts.css') %>
-    <%- renderCSS('fonts/Satoshi/satoshi.css') %>
+    <%- renderCSS('fonts/GeistMono/geist-mono.css') %>
+    <%- renderCSS('fonts/Geist/geist.css') %>
     <!--- Font Part-->
     <% if (theme.home_banner.custom_font.enable) { %>
         <link href="<%- theme.home_banner.custom_font.url %>" rel="stylesheet">
@@ -114,7 +113,12 @@
     <% if (theme.global.fonts.english.enable) { %>
         <link href="<%- theme.global.fonts.english.url %>" rel="stylesheet">
     <% } %>
-
+    <% if (theme.global.fonts.title.enable) { %>
+        <link href="<%- theme.global.fonts.title.url %>" rel="stylesheet">
+    <% } %>
+    <% if (theme.global.preloader === true || theme.global.preloader.enable === true) { %>
+        <%- renderJS('js/libs/anime.min.js')%>
+    <% } %>
 
     <%- export_config() %>
     
