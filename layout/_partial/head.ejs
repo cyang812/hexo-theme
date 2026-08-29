@@ -12,6 +12,12 @@
         google_plus:    theme.open_graph.google_plus,
     }) %>
     <%- meta(page) %>
+    <% if (is_post() && page.lang) { %>
+      <link rel="alternate" hreflang="<%= page.lang %>" href="<%= url_for(page.path) %>">
+      <% Object.keys(page.translations || {}).forEach(function(language) { %>
+        <link rel="alternate" hreflang="<%= language %>" href="<%= url_for(page.translations[language]) %>">
+      <% }); %>
+    <% } %>
     <% if (theme.favicon) { %>
       <% if (theme.favicon.desktop) { %>
         <% if (theme.gravatar && (theme.gravatar.email || theme.gravatar.hash) && theme.favicon.desktop.gravatar) { %>

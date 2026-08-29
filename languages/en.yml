@@ -67,3 +67,5 @@ comments:
 tooltip:
   copy_tip: Copy to clipboard!
   copied: Copied!
+  expand_code: Expand code
+  collapse_code: Collapse code

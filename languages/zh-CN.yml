@@ -67,3 +67,5 @@ comments:
 tooltip:
   copy_tip: 复制到粘贴板！
   copied: 复制成功！
+  expand_code: 展开代码
+  collapse_code: 收起代码

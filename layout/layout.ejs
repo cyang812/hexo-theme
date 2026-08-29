@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>>
+<% const documentLanguage = is_post() && page.lang ? page.lang : config.language; %>
+<html<% if (documentLanguage) { %> lang="<%= documentLanguage %>"<% } %>>
 <%- partial('_partial/head') %>
 <body class="max-width mx-auto px3 <%- theme.direction -%>">
     <% if (is_post()) { %>

@@ -1,0 +1,24 @@
+<%
+  const languageLabels = {
+    en: 'English',
+    'zh-CN': '中文'
+  };
+  const currentLanguage = page.lang || config.language;
+  const translations = page.translations || {};
+  const translatedLanguages = Object.keys(translations);
+  const switcherLabel = currentLanguage === 'zh-CN' ? '语言' : 'Language';
+%>
+<% if (translatedLanguages.length > 0) { %>
+  <nav class="language-switcher" aria-label="<%= switcherLabel %>">
+    <span><%= switcherLabel %>:</span>
+    <span class="current-language" aria-current="page">
+      <%= languageLabels[currentLanguage] || currentLanguage %>
+    </span>
+    <% translatedLanguages.forEach(function(language) { %>
+      <span aria-hidden="true">/</span>
+      <a href="<%= url_for(translations[language]) %>" hreflang="<%= language %>" lang="<%= language %>">
+        <%= languageLabels[language] || language %>
+      </a>
+    <% }); %>
+  </nav>
+<% } %>
