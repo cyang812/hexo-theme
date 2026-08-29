@@ -22,15 +22,58 @@
   <% } %>
   <script type="text/javascript">
   $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"<%= __('tooltip.copy_tip') %>\">";
-    btn += '<i class="fa-regular fa-clone"></i>';
-    btn += '</span>';
-    // mount it!
-    $(".highlight table").before(btn);
+    var collapsedLineCount = 10;
+
+    $(".highlight").each(function() {
+      var highlight = this;
+      var table = highlight.querySelector("table");
+      var lineCount = highlight.querySelectorAll("td.code .line").length;
+      var actions = document.createElement("div");
+      var copyButton = document.createElement("button");
+
+      if (!table) {
+        return;
+      }
+
+      actions.className = "code-actions";
+      copyButton.type = "button";
+      copyButton.className = "btn-copy code-action tooltipped tooltipped-sw";
+      copyButton.setAttribute("aria-label", "<%= __('tooltip.copy_tip') %>");
+      copyButton.innerHTML = '<i class="fa-regular fa-clone" aria-hidden="true"></i>';
+      actions.appendChild(copyButton);
+
+      if (lineCount > collapsedLineCount) {
+        var collapseButton = document.createElement("button");
+
+        highlight.classList.add("is-collapsible", "is-collapsed");
+        collapseButton.type = "button";
+        collapseButton.className = "btn-collapse code-action tooltipped tooltipped-sw";
+        collapseButton.setAttribute("aria-expanded", "false");
+        collapseButton.setAttribute("aria-label", "<%= __('tooltip.expand_code') %>");
+        collapseButton.innerHTML = '<i class="fa-solid fa-expand" aria-hidden="true"></i>';
+        collapseButton.addEventListener("click", function() {
+          var isCollapsed = highlight.classList.toggle("is-collapsed");
+
+          collapseButton.setAttribute("aria-expanded", String(!isCollapsed));
+          collapseButton.setAttribute(
+            "aria-label",
+            isCollapsed
+              ? "<%= __('tooltip.expand_code') %>"
+              : "<%= __('tooltip.collapse_code') %>"
+          );
+          collapseButton.innerHTML = isCollapsed
+            ? '<i class="fa-solid fa-expand" aria-hidden="true"></i>'
+            : '<i class="fa-solid fa-compress" aria-hidden="true"></i>';
+        });
+        actions.appendChild(collapseButton);
+      }
+
+      table.parentNode.insertBefore(actions, table);
+    });
+
     var clip = new ClipboardJS('.btn-copy', {
       text: function(trigger) {
-        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+        return Array.from(trigger.closest('.highlight').querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
       }
     });
     clip.on('success', function(e) {
@@ -41,6 +84,16 @@
   </script>
 <% } %>
 <%- js('js/main') %>
+<% if (page.mermaid) { %>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: '<%= theme.colorscheme === "dark" ? "dark" : "default" %>'
+    });
+  </script>
+<% } %>
 <!-- search -->
 <% if (config.search && (page.search || page.type === "search")){ %>
   <%- js('js/search.js') %>
